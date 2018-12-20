@@ -1,0 +1,476 @@
+namespace minback
+{
+    class minback
+    {
+        private string[] flaskor = new string[25]; //JObbar ni med struct (ev betyg C) eller klass för soda (betyg A) så är det inte "string" som är datatyp här
+        private int antal_flaskor = 0; //Håller reda på antal flaskor
+
+
+        public void Run()
+        {
+            int alternativmenyn = 4;
+            do
+            {
+
+                Console.WriteLine("(===(==(=( Välkomemen till Adriana Larssons läskback! )=)==)===) ");
+                Console.WriteLine("   ");
+
+                Console.WriteLine(" Välj ett alternativ :");
+                Console.WriteLine(" Tryck ( 1 ) för att se innehållet av läskbacken ");
+                Console.WriteLine(" Tryck ( 2 ) för att lägga till en läsk i läskbacken ");
+                Console.WriteLine(" Tryck ( 3 ) för att se de totala värdet i läskbacken ");
+                Console.WriteLine(" Tryck ( 4 ) för att avsluta programmet ");
+                Console.WriteLine("  ");
+                alternativmenyn = int.Parse(Console.ReadLine());
+
+                //Här ska menyn ligga för att göra saker
+                //Jag rekommenderar switch och case här med en loop
+                //I del 1 av filmerna för slutprojektet kodar jag en switch case
+                switch (alternativmenyn)
+                {
+                    case 1:
+                        Find_soda();
+                        break;
+                    case 2:
+                        Add_soda();
+                        break;
+                    case 3:
+                        Calc_lator();
+                        break;
+                    case 5:
+                        Print_crate();
+                        break;
+                    case 4:
+                        Console.WriteLine(" Du valde att avsluta ");
+                        break;
+
+
+                }
+
+            } while (alternativmenyn != 4);
+        }
+
+
+
+        public void Add_soda()
+        {
+
+
+            int alternativlaskmeny = 0;
+            do
+            {
+
+                Console.WriteLine("   ");
+                Console.WriteLine("(===(==(=( Olika läskdrycker =)==)===) )");
+                Console.WriteLine("  ");
+                Console.WriteLine(" Tryck ( 1 ) för att lägga till (--(  Coca-Cola  )--)");
+                Console.WriteLine(" Tryck ( 2 ) för att lägga till (--(    Fanta    )--)");
+                Console.WriteLine(" Tryck ( 3 ) för att lägga till (--(    Pommac   )--)");
+                Console.WriteLine(" Tryck ( 4 ) för att lägga till (--(    Sprite  )--)");
+                Console.WriteLine(" Tryck ( 5 ) för att lägga till (--(    Ramlösa   )--)");
+                Console.WriteLine(" Tryck ( 6 ) för att lägga till (--(  Lingondricka  )--)");
+                Console.WriteLine(" Tryck ( 7 ) för att se antalet drycker i backen ");
+                Console.WriteLine(" Tryck ( 8 ) för att se värdet i i backen");
+                Console.WriteLine(" Tryck ( 0 ) för att komma tillbaka till huvudmenyn menyn");
+                Console.WriteLine("   ");
+
+                alternativlaskmeny = int.Parse(Console.ReadLine());
+
+                switch (alternativlaskmeny)
+
+
+                {
+                    
+                    case 1:
+                        Console.WriteLine(" Du valde att lägga till Coca-Cola ");
+                        Console.WriteLine(" Hur många vill du lägga till?");
+                        string cocacola = "Coca-Cola";
+                        int userinput = int.Parse(Console.ReadLine());
+                        Console.WriteLine(" Du valde " + userinput + " stycken" + " " + cocacola + "");
+
+                       
+                        do
+                        {
+                        if (antal_flaskor + userinput < 25)
+                        {
+
+
+                            for (int i = 0; i < userinput; i++)
+                            {
+
+                                antal_flaskor++;
+
+                            }
+                                int summa = userinput + userinput;
+                                Console.WriteLine(  summa - userinput - flaskor.Length + " platser kvar i läskbacken ");
+                           
+
+                            }
+
+
+                            if (userinput < flaskor.Length)
+
+                            {
+                                Console.WriteLine("Hur många vill du lägga till?");
+                                userinput = int.Parse(Console.ReadLine());
+                                Console.WriteLine(" Du valde lägga till " + userinput + " stycken" + " " + cocacola + "");
+
+                        }
+
+
+                            if (userinput > flaskor.Length)
+                                
+                            {
+                                antal_flaskor--;
+
+                                Console.WriteLine(" Det ryms bara 25 drickor i backen, du måste tabort drickor. ");
+                                Console.WriteLine("Hur många vill du tabort?");
+                                userinput = int.Parse(Console.ReadLine());
+                                Console.WriteLine(" Du valde tabort " + userinput + " stycken" + " " + cocacola + "");
+                                int summa5 = + userinput + userinput ;
+                                Console.WriteLine(summa5 + " platser kvar i läskbacken 1");
+                        }
+
+
+                            antal_flaskor--;
+                            int summa1 = antal_flaskor - userinput;
+                            Console.WriteLine(" Det ryms bara 25 drickor i backen, du måste tabort drickor. ");
+                            Console.WriteLine("Hur många vill du tabort?");
+                            userinput = int.Parse(Console.ReadLine());
+                            Console.WriteLine(" Du valde tabort " + userinput + " stycken" + " " + cocacola + "");
+                            int summa3 = userinput - userinput;
+                            Console.WriteLine(summa3 + " platser kvar i läskbacken 1");
+                            int summa4 = userinput - userinput;
+                            if (userinput == flaskor.Length)
+                            
+                            
+                            
+                        {
+                            Console.WriteLine(" Backen är nu full och det är 25 stycken flaskor i backen");
+                                break;
+                            }
+
+
+                      
+                           
+
+                        } while (userinput > flaskor.Length || userinput < flaskor.Length) ;
+                            break;
+
+
+                     
+
+                            
+                        
+            case 2:
+
+                        Console.WriteLine(" Du valde att lägga till Fanta ");
+                        Console.WriteLine(" Hur många vill du lägga till?");
+                        string fanta = "Fanta";
+                        int userinput1 = int.Parse(Console.ReadLine());
+                        Console.WriteLine(" Du valde " + userinput1 + " stycken" + " " + fanta + "");
+
+                        if (antal_flaskor + userinput1 < 25)
+                        {
+
+
+                            for (int i = 0; i < userinput1; i++)
+                            {
+
+                                antal_flaskor++;
+
+                            }
+
+                            Console.WriteLine( antal_flaskor + " platser kvar i läskbacken ");
+
+
+                        }
+                        else
+
+                        {
+                            Console.WriteLine(" Backen är nu full och det är 25 stycken flaskor i backen");
+                          
+                        }
+                        break;
+
+
+
+
+                    case 3:
+                        Console.WriteLine(" Du valde att lägga till Pommac");
+                        Console.WriteLine(" Hur många vill du lägga till?");
+                        string pommac = "Pommac";
+                        int userinput2 = int.Parse(Console.ReadLine());
+                        Console.WriteLine(" Du valde " + userinput2 + " stycken" + "" + pommac + "");
+
+                        if (antal_flaskor + userinput2 < 25)
+                        {
+
+
+                            for (int i = 0; i < userinput2; i++)
+                            {
+
+                                antal_flaskor++;
+
+                            }
+
+                            Console.WriteLine(flaskor.Length - antal_flaskor + " platser kvar i läskbacken ");
+
+
+                        }
+                        else
+
+                        {
+                            Console.WriteLine(" Backen är nu full och det är 25 stycken flaskor i backen");
+                          
+                        }
+                        break;
+
+
+                    case 4:
+
+                        Console.WriteLine(" Du valde att lägga till Sprite ");
+                        Console.WriteLine(" Hur många vill du lägga till?");
+                        string sprite = "Sprite";
+                        int userinput3 = int.Parse(Console.ReadLine());
+                        Console.WriteLine(" Du valde " + userinput3 + " stycken" + "" + sprite + "");
+
+                        if (antal_flaskor + userinput3 < 25)
+                        {
+
+
+                            for (int i = 0; i < userinput3; i++)
+                            {
+
+                                antal_flaskor++;
+
+                            }
+
+                            Console.WriteLine(flaskor.Length - antal_flaskor + " platser kvar i läskbacken");
+
+
+                        }
+                        else
+
+                        {
+                            Console.WriteLine(" Backen är nu full och det är 25 stycken flaskor i backen");
+                               
+                        }
+                        break;
+
+
+                    case 5:
+
+                        Console.WriteLine(" Du valde att lägga till Ramlösa ");
+                        Console.WriteLine(" Hur många vill du lägga till?");
+                        string ramlosa = "Ramlösa";
+                        int userinput4 = int.Parse(Console.ReadLine());
+                        Console.WriteLine(" Du valde " + userinput4 + " stycken" + "" + ramlosa + "");
+
+                        if (antal_flaskor + userinput4 < 25)
+                        {
+
+
+                            for (int i = 0; i < userinput4; i++)
+                            {
+
+                                antal_flaskor++;
+
+                            }
+
+                            Console.WriteLine(flaskor.Length - antal_flaskor + " platser kvar i läskbacken");
+
+
+                        }
+                        else
+
+                        {
+                            Console.WriteLine(" Backen är nu full och det är 25 stycken flaskor i backen");
+                        }
+                        break;
+
+
+
+                    case 6:
+                        Console.WriteLine(" Du valde att lägga till Lingondrycka ");
+                        Console.WriteLine(" Hur många vill du lägga till?");
+                        string lingondricka = "Lingondricka";
+                        int userinput5 = int.Parse(Console.ReadLine());
+                        Console.WriteLine(" Du valde " + userinput5 + " stycken" + "" + lingondricka + "");
+                        break;
+                        if (antal_flaskor + userinput5 < 25)
+                        {
+
+
+                            for (int i = 0; i < userinput5; i++)
+                            {
+
+                                antal_flaskor++;
+
+                            }
+
+                            Console.WriteLine(flaskor.Length - antal_flaskor + " platser kvar i läskbacken ");
+
+
+                        }
+                        else
+
+                        {
+                            Console.WriteLine(" Backen är nu full och det är 25 stycken flaskor i backen");
+                        }
+                        break;
+
+                    case 7:
+                        Print_crate();
+                        Console.WriteLine(" Tryck ( 7 ) för att se antalet drycker i backen ");
+                        break;
+                    case 8:
+                        Calc_lator();
+                        Console.WriteLine(" Tryck ( 8 ) för att se hur mycket din back kostar");
+                        break;
+                    case 0:
+                        Run();
+                        Console.WriteLine(" Du valde att inte lägga in någon dricka");
+                        break;
+
+
+                }
+
+                /*Metod för att lägga till en läskflaska
+                Om ni har information om både pris, läsktyp och namn
+                kan det vara läge att presentera en meny här där man kan
+                välja på förutbestämda läskflaskor. Då kan man också rätt enkelt
+                göra ett val för att fylla läskbacken med slumpade flaskor
+                */
+
+
+            } while (alternativlaskmeny != 0);
+        }
+
+
+
+        public void Print_crate()
+
+
+        {
+            for (int i = 0; i < flaskor.Length; i++)
+           
+            {
+                int summa = flaskor.Length + antal_flaskor;
+                Console.WriteLine("Antalet drycker i din back är " + summa  );
+
+            }
+            int minussumma = flaskor.Length - antal_flaskor;
+            for (int i = 0; i < flaskor.Length; i--) ;
+
+            {
+                Console.WriteLine(" Antalet flaksor i backen" + minussumma);
+
+            }
+        }
+
+
+        public void Calc_lator()
+        {
+
+
+            int totalantal = 0;
+
+            for (int k = 0; k < flaskor.Length; k++)
+
+                totalantal = antal_flaskor * 5;
+
+            {
+                Console.WriteLine("Din Läskback kostar  " + totalantal + " kronor");
+                Console.WriteLine();
+            }
+         
+
+        }
+
+
+
+        public void Find_soda()
+        {
+            //Betyg C
+            //Beskrivs i läroboken på sidan 147 och framåt (kodexempel på sidan 149)
+            //Man ska kunna söka efter ett namn
+            //Man kan använda string-metoderna ToLower() eller ToUpper() 
+
+
+
+
+            Console.WriteLine(" I Adriana Larsson läskback finns det:");
+
+            Console.WriteLine("(( Coca-Cola 5kr ))");
+            Console.WriteLine(" (( Fanta 5kr  ))");
+            Console.WriteLine("(( Ramlösa 5kr ))");
+            Console.WriteLine(" (( Lingondricka 5kr ))");
+            Console.WriteLine("(( Pommac 5kr ))");
+            Console.WriteLine(" (( Sprite 5kr )) ");
+            Console.WriteLine("   ");
+            Console.WriteLine(" ** Sök efter dryck ** ");
+
+            string[] sodaNames = { "Coca-Cola", "Fanta", "Ramlösa", "Pommac", "Sprite", "Lingondricka" };
+            string sodauserinput = Console.ReadLine();
+            bool iftrue = false;
+            for (int i = 0; i < sodaNames.Length; i++)
+
+            {
+                if (sodauserinput == sodaNames[i])
+                {
+
+                    iftrue = true;
+                }
+            }
+            if (iftrue == true)
+            {
+                Console.WriteLine(sodauserinput + " finns i läsbacken och den kostar 5 kronor");
+                Console.WriteLine("");
+            }
+            else
+            {
+
+                Console.WriteLine(sodauserinput + " finns inte i läsbacken ");
+            }
+            int alternativfindsoda = 0;
+
+
+            {
+                Console.WriteLine(" Tryck ( 1 ) att lägga till  " + sodauserinput + " i backen ");
+                Console.WriteLine(" Tryck ( 2 ) för att återgå till huvudmenyn ");
+                Console.WriteLine(" Tryck ( 3 ) att för att söka efter en annan dricka  ");
+                Console.WriteLine(" Tryck ( 0 ) för att avsluta ");
+
+
+                alternativfindsoda = int.Parse(Console.ReadLine());
+
+                switch (alternativfindsoda)
+                {
+
+                    case 1:
+                        Add_soda();
+                        break;
+                    case 2:
+                        Run();
+                        break;
+                    case 3:
+                        Find_soda();
+                        break;
+                    case 0:
+                        Console.WriteLine("Du valde at avsluta");
+                        break;
+                }
+            } while (alternativfindsoda != 2) ;
+        }
+
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            minback minabck = new minback();
+            minabck.Run();
+        }
+    }
+}

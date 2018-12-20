@@ -1,0 +1,55 @@
+        }
+            
+                
+        public void addsoda()
+        {
+            /*Metod för att lägga till en läskflaska
+            Om ni har information om både pris, läsktyp och namn
+            kan det vara läge att presentera en meny här där man kan
+            välja på förutbestämda läskflaskor. Då kan man också rätt enkelt
+            göra ett val för att fylla läskbacken med slumpade flaskor
+            */
+        }
+
+        public void print_crate()
+        {
+            //kod här
+            //Missa inte hjälpkoden som finns i projektbeskrivningen
+            //Där beskrivs hur man löser det med tomma positioner i vektorn
+        }
+
+        public int calculator_total()
+        {
+            //kod här
+            //Tänk på att inte räkna med tomma positioner i vektorn
+        }
+
+        public void findsoda()
+        {
+            //Betyg C
+            //Beskrivs i läroboken på sidan 147 och framåt (kodexempel på sidan 149)
+            //Man ska kunna söka efter ett namn
+            //Man kan använda string-metoderna ToLower() eller ToUpper() 
+        }
+
+        public void sort_sodas()
+        {
+            //Betyg A-C
+            //Beskrivs i läroboken på sidan 147 och framåt (kodexempel på sidan 159)
+            //Man ska kunna sortera vektorn med flaskor och med bubble sort
+            //Det är mycket svårt att sortera efter bokstavsordning - är inte flaskorna egna objekt utan bara strängar...
+            //... går det bra att sortera efter längden på namnet istället. 
+        }
+    }
+
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Skapar ett objekt av klassen Sodacrate som heter sodacrate
+            var sodacrate = new Sodacrate();
+            sodacrate.Run();
+            Console.Write("Press any key to continue . . . ");
+            Console.ReadKey(true);
+        }
+    }

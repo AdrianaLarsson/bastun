@@ -1,0 +1,73 @@
+{
+    class bastu1drianaProgram
+    {
+        public static float FahrenheitToCelsisus(float fahrenheit)
+
+        {
+            float celsius = (fahrenheit - 32) * 5 / 9;
+            return celsius;
+        }
+
+
+        static void bastu2Main(string[] args)
+
+        {
+            
+
+
+
+
+
+
+
+
+
+            float maxtemperaturefahr = 170.6f;
+            float correcttemperaturefahr = 167f;
+            float mintemperaturefahr = 163.4f;
+            float fahrenheit = 167;
+
+            Console.Write("Skriv in temp in Fahr: ");
+            string nr = Console.ReadLine();
+
+            float userinfahr = Convert.ToSingle(Console.ReadLine());
+            float celsius = FahrenheitToCelsisus(userinfahr);
+
+
+
+            Console.WriteLine(" The temperature in Fahr " + celsius + " grader i celsius");
+            string nr1 = Console.ReadLine();
+
+           
+            do
+            {
+                
+
+                if
+                    
+                    (userinfahr > maxtemperaturefahr)
+                {
+                    Console.WriteLine(" To High! Turn down");
+                    celsius = float.Parse(Console.ReadLine());
+
+                }
+
+                else if (userinfahr < mintemperaturefahr)
+
+                {
+
+                    Console.WriteLine(" To low! Turn up ");
+  
+                    celsius = float.Parse(Console.ReadLine());
+                }
+          }
+
+
+            while (userinfahr < mintemperaturefahr || userinfahr > mintemperaturefahr);
+            Console.Write(" yeppp");
+            Console.ReadLine();
+        }
+            
+           
+    }
+}
